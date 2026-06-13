@@ -26,7 +26,7 @@ export default function Footer() {
         <div>
           <p className="text-white font-semibold mb-3">Contact Us</p>
           <ul className="space-y-2 text-sm">
-            <li>A.K. Brohi Road, H-11/4, Islamabad</li>
+            <li>Johar Town Lahore</li>
             <li>+92-51-111-128-128</li>
             <li>info@nu.edu.pk</li>
           </ul>
