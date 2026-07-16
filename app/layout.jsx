@@ -1,21 +1,35 @@
-import Hero from "@/components/home/Hero";
-import About from "@/components/home/About";
-import ProgramsPreview from "@/components/home/ProgramsPreview";
-import TestimonialsPreview from "@/components/home/TestimonialsPreview";
-import NewsPreview from "@/components/home/NewsPreview";
-import CTA from "@/components/home/CTA";
-import Stats from "@/components/home/Stats";
+import "./globals.css";
+import { Inter } from "next/font/google";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import ThemeProvider from "@/components/providers/ThemeProvider";
 
-export default function Home() {
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const metadata = {
+  title: "College Portfolio",
+  description: "College Portfolio Website",
+};
+
+export default function RootLayout({ children }) {
   return (
-    <>
-      <Hero />
-      <Stats />
-      <About />
-      <ProgramsPreview />
-      <TestimonialsPreview />
-      <NewsPreview />
-      <CTA />
-    </>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${inter.className} bg-white text-gray-900 dark:bg-slate-950 dark:text-white transition-colors duration-300`}
+      >
+        <ThemeProvider>
+          <Navbar />
+
+          <main className="min-h-screen">
+            {children}
+          </main>
+
+          <Footer />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
