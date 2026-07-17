@@ -19,33 +19,89 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl shadow-sm shadow-slate-900/5 dark:border-slate-800 dark:bg-slate-950/95">
+      {/* ================= NAVBAR ================= */}
+      <nav
+        className="
+          sticky top-0 z-50
+
+          border-b border-stone-300
+
+          bg-stone-200/90
+          backdrop-blur-2xl
+
+          shadow-lg
+
+          dark:border-slate-800
+          dark:bg-slate-900/90
+        "
+      >
         <div className="grid w-full grid-cols-[auto_1fr_auto] items-center px-6 py-4 lg:px-10 xl:px-14">
-          {/* Logo */}
+
+          {/* ================= Logo ================= */}
           <Link
             href="/"
-            className="justify-self-start bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700 bg-clip-text text-2xl font-extrabold tracking-tight text-transparent transition-all duration-300 hover:from-blue-700 hover:to-indigo-700 dark:from-cyan-300 dark:via-blue-300 dark:to-sky-400 dark:hover:from-cyan-200 dark:hover:to-blue-300"
+            className="justify-self-start bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-700 bg-clip-text text-2xl font-extrabold tracking-tight text-transparent transition-all duration-300 hover:scale-105 dark:from-cyan-300 dark:via-blue-300 dark:to-sky-400"
           >
             Innovia Institute
           </Link>
 
-          {/* Desktop Links */}
-          <div className="hidden justify-self-center md:flex items-center gap-2">
+          {/* ================= Desktop Links ================= */}
+          <div className="hidden items-center justify-self-center md:flex">
             {links.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="group relative rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition-all duration-300 hover:bg-blue-50 hover:text-blue-700 dark:text-slate-300 dark:hover:bg-slate-900 dark:hover:text-cyan-300"
+                className="
+                  group
+                  relative
+                  rounded-full
+                  px-5
+                  py-2.5
+                  text-sm
+                  font-semibold
+                  text-slate-600
+                  transition-all
+                  duration-300
+
+                  hover:bg-white
+                  hover:text-blue-700
+                  hover:shadow-md
+                  hover:shadow-blue-200
+
+                  dark:text-slate-300
+                  dark:hover:bg-slate-800
+                  dark:hover:text-cyan-300
+                  dark:hover:shadow-none
+                "
               >
                 {link.name}
 
-                <span className="absolute inset-x-4 -bottom-px h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+                <span
+                  className="
+                    absolute
+                    left-4
+                    right-4
+                    -bottom-0.5
+                    h-0.5
+                    scale-x-0
+                    rounded-full
+                    bg-gradient-to-r
+                    from-blue-500
+                    via-cyan-400
+                    to-indigo-500
+                    transition-transform
+                    duration-300
+                    group-hover:scale-x-100
+                  "
+                />
               </Link>
             ))}
           </div>
 
-          {/* Right Side */}
-          <div className="flex items-center justify-self-end gap-2">
+          {/* ================= Right Side ================= */}
+          <div className="flex items-center justify-self-end gap-3">
+
+            {/* Desktop Theme */}
             <div className="hidden md:block">
               <ThemeToggle />
             </div>
@@ -53,12 +109,23 @@ export default function Navbar() {
             {/* Mobile Button */}
             <button
               onClick={() => setIsOpen(true)}
-              className="rounded-xl p-2 md:hidden"
+              className="
+                rounded-xl
+                p-2
+                transition
+                hover:bg-white
+                hover:shadow-md
+
+                dark:hover:bg-slate-800
+
+                md:hidden
+              "
             >
               <div className="relative h-7 w-7">
+
                 <HiMenu
-                  size={30}
-                  className={`absolute transition-all duration-300 ${
+                  size={28}
+                  className={`absolute text-slate-700 transition-all duration-300 dark:text-white ${
                     isOpen
                       ? "rotate-90 scale-0 opacity-0"
                       : "rotate-0 scale-100 opacity-100"
@@ -66,13 +133,14 @@ export default function Navbar() {
                 />
 
                 <HiX
-                  size={30}
-                  className={`absolute transition-all duration-300 ${
+                  size={28}
+                  className={`absolute text-slate-700 transition-all duration-300 dark:text-white ${
                     isOpen
                       ? "rotate-0 scale-100 opacity-100"
                       : "-rotate-90 scale-0 opacity-0"
                   }`}
                 />
+
               </div>
             </button>
           </div>
@@ -88,46 +156,49 @@ export default function Navbar() {
             : "pointer-events-none"
         }`}
       >
-        {/* Background */}
+        {/* Overlay */}
         <div
           onClick={() => setIsOpen(false)}
-          className={`absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-500 ${
+          className={`absolute inset-0 bg-slate-900/45 backdrop-blur-sm transition-opacity duration-500 ${
             isOpen ? "opacity-100" : "opacity-0"
           }`}
         />
 
         {/* Drawer */}
         <div
-          className={`absolute right-0 top-0 flex h-full w-[85%] max-w-sm flex-col bg-white shadow-2xl transition-transform duration-500 ease-in-out dark:bg-slate-950 ${
+          className={`absolute right-0 top-0 flex h-full w-[86%] max-w-sm flex-col bg-gradient-to-b from-white via-slate-50 to-blue-50 shadow-2xl transition-transform duration-500 ease-in-out dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
+
           {/* Header */}
-          <div className="flex items-center justify-between border-b border-slate-200 px-6 py-6 dark:border-slate-800">
-            <h2 className="text-2xl font-bold text-blue-700 dark:text-cyan-400">
+          <div className="flex items-center justify-between border-b border-blue-100 px-6 py-6 dark:border-slate-800">
+
+            <h2 className="text-2xl font-extrabold text-blue-700 dark:text-cyan-400">
               MENU
             </h2>
 
             <button
               onClick={() => setIsOpen(false)}
-              className="rounded-lg p-2 transition hover:bg-slate-100 dark:hover:bg-slate-800"
+              className="rounded-xl p-2 transition hover:bg-white hover:shadow dark:hover:bg-slate-800"
             >
-              <HiX size={30} />
+              <HiX size={28} />
             </button>
           </div>
 
-          {/* Navigation */}
-          <div className="flex-1 px-8 py-8">
-            <div className="flex flex-col items-center gap-2">
+          {/* Links */}
+          <div className="flex-1 px-8 py-10">
+            <div className="flex flex-col gap-3">
+
               {links.map((link, index) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   style={{
-                    transitionDelay: `${index * 80}ms`,
+                    transitionDelay: `${index * 70}ms`,
                   }}
-                  className={`w-full rounded-xl py-3 text-center text-lg font-bold uppercase tracking-wide text-slate-800 transition-all duration-500 hover:bg-blue-50 hover:text-blue-600 dark:text-white dark:hover:bg-slate-800 dark:hover:text-cyan-400 ${
+                  className={`rounded-2xl py-4 text-center text-lg font-bold tracking-wide text-slate-700 transition-all duration-500 hover:bg-white hover:text-blue-700 hover:shadow-lg dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-cyan-300 ${
                     isOpen
                       ? "translate-x-0 opacity-100"
                       : "translate-x-12 opacity-0"
@@ -136,14 +207,21 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
+
             </div>
           </div>
 
           {/* Bottom */}
-          <div className="border-t border-slate-200 p-6 dark:border-slate-800">
-            <div className="mb-5 flex justify-center">
+          <div className="border-t border-blue-100 p-6 dark:border-slate-800">
+
+            <div className="mb-4 flex justify-center">
               <ThemeToggle />
             </div>
+
+            <p className="text-center text-sm text-slate-500 dark:text-slate-400">
+              Innovia Institute
+            </p>
+
           </div>
         </div>
       </div>

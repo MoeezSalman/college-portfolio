@@ -32,7 +32,7 @@ const programLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-slate-200 bg-gradient-to-b from-slate-50 via-blue-50 to-slate-100 transition-colors duration-300 dark:border-slate-800 dark:from-slate-950 dark:via-slate-950 dark:to-slate-950">
+    <footer className="relative overflow-hidden border-t border-slate-200 bg-gradient-to-b from-stone-200 via-blue-100 to-stone-300 transition-colors duration-300 dark:border-slate-800 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(59,130,246,0.08),transparent_40%)]"></div>
       <div className="w-full px-6 py-16 lg:px-10 xl:px-14">
         <div className="grid gap-14 lg:grid-cols-[2fr_1fr_1fr_1.4fr]">
