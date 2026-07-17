@@ -40,7 +40,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 dark:bg-gradient-to-r dark:from-blue-300 dark:via-cyan-300 dark:to-sky-400 dark:bg-clip-text dark:text-transparent">
-              College Portfolio
+              Innovia Institute
             </h2>
 
             <p className="mt-5 max-w-xs leading-8 text-slate-600 dark:text-slate-400">
