@@ -2,14 +2,20 @@ import {
   HiOutlineCpuChip,
   HiOutlineBolt,
   HiOutlineChartBar,
+  HiOutlineCodeBracket,
+  HiOutlineGlobeAlt,
+  HiOutlineSparkles,
   HiOutlineCheckCircle,
 } from "react-icons/hi2";
 
 // Modern icons per program (falls back to the emoji from data)
 const programIcons = {
-  1: <HiOutlineCpuChip size={30} />,
-  2: <HiOutlineBolt size={30} />,
-  3: <HiOutlineChartBar size={30} />,
+  1: <HiOutlineCpuChip size={30} />,      // BS Computer Science
+  2: <HiOutlineBolt size={30} />,         // Electrical Engineering
+  3: <HiOutlineChartBar size={30} />,     // BBA
+  4: <HiOutlineCodeBracket size={30} />,  // Software Engineering
+  5: <HiOutlineGlobeAlt size={30} />,     // Information Technology
+  6: <HiOutlineSparkles size={30} />,     // Artificial Intelligence
 };
 
 export default function ProgramCard({ program }) {
@@ -20,10 +26,8 @@ export default function ProgramCard({ program }) {
       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
       <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-600/25 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-        {programIcons[program.id] ?? (
-          <span className="text-3xl">{program.icon}</span>
-        )}
-      </div>
+  {programIcons[program.id]}
+</div>
 
       <h2 className="mb-3 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
         {program.title}

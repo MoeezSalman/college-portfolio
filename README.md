@@ -1,36 +1,234 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 College Portfolio Website
 
-## Getting Started
+A modern, responsive, and high-performance **College Portfolio Website** built with **Next.js 16**, **Tailwind CSS**, and deployed on **Vercel**. This project was developed as part of the onboarding assessment for **Nestick Tech**.
 
-First, run the development server:
+---
+
+## 🌐 Live Demo
+
+🔗 **Live Website:** https://college-portfolio-seven.vercel.app/
+
+🔗 **GitHub Repository:** https://github.com/MoeezSalman/college-portfolio
+
+---
+
+## 📖 Project Overview
+
+This project serves as a digital portfolio for a college, providing visitors with information about the institution, its academic programs, faculty, campus news, student testimonials, and contact details.
+
+The application focuses on:
+
+- Clean and modern UI/UX
+- Responsive design
+- Fast performance
+- Modular architecture
+- Dynamic data fetching
+- Dark mode support
+
+---
+
+## 🚀 Features
+
+### 🏠 Homepage
+
+- Modern Hero Section
+- About the Institute
+- Statistics Section
+- Programs Preview
+- Student Testimonials Preview
+- Latest News Preview
+- Call-To-Action Section
+
+### 👨‍🏫 Faculty
+
+- Responsive faculty directory
+- Real-time search functionality
+- Faculty profile cards
+- Department information
+
+### 🎓 Programs
+
+- Degree programs listing
+- Course overview
+- Responsive program cards
+
+### 💬 Testimonials
+
+- Student success stories
+- Rating display
+- Responsive testimonial cards
+
+### 📰 News & Events
+
+- Dynamic data fetched from a mock API
+- Event images
+- Event categories
+- Event dates
+
+### 📞 Contact
+
+- Responsive contact page
+- React Hook Form validation
+- Contact information
+- Modern UI
+
+### 🌙 Dark Mode
+
+- Light/Dark theme toggle
+- Persistent theme using **next-themes**
+- Fully responsive in both themes
+
+### 🔐 Mock Admin Panel
+
+- Demo login page
+- Protected dashboard using middleware
+- Cookie-based authentication
+- Dashboard statistics
+- Logout functionality
+
+---
+
+# 🛠 Tech Stack
+
+| Technology | Usage |
+|------------|-------|
+| Next.js 16 | React Framework |
+| Tailwind CSS | Styling |
+| React Hook Form | Form Validation |
+| Next Themes | Dark Mode , Light Mode|
+| React Icons | Icons |
+| Vercel | Deployment |
+
+---
+
+# 📂 Folder Structure
+
+```
+app/
+│
+├── admin/
+├── contact/
+├── faculty/
+├── news/
+├── programs/
+├── testimonials/
+│
+components/
+│
+├── admin/
+├── faculty/
+├── home/
+├── layout/
+├── news/
+├── programs/
+├── testimonials/
+├── providers/
+└── ui/
+│
+data/
+│
+lib/
+│
+public/
+│
+styles/
+```
+
+---
+
+# ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/college-portfolio.git
+```
+
+Navigate into the project
+
+```bash
+cd college-portfolio
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# 🔑 Demo Admin Credentials
 
-To learn more about Next.js, take a look at the following resources:
+Email
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+admin@college.com
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Password
 
-## Deploy on Vercel
+```
+admin123
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 📱 Responsive Design
+
+The website is fully optimized for
+
+- 💻 Desktop
+- 💼 Laptop
+- 📱 Tablet
+- 📲 Mobile
+
+---
+
+# 🌟 Highlights
+
+- ⚡ Fast page loading
+- 🎨 Modern responsive UI
+- 🌙 Dark Mode
+- 📡 Dynamic API Integration
+- 📱 Mobile-first Design
+- 🔍 Faculty Search
+- 📰 Dynamic News Section
+- 🔐 Protected Admin Dashboard
+- 📩 Form Validation
+- ♻️ Reusable Components
+
+---
+
+# 🚀 Deployment
+
+The application is deployed using **Vercel**.
+
+To deploy:
+
+```bash
+npm run build
+```
+---
+# 👨‍💻 Developed By
+
+**Muhammad Moeez Salman**
+
+Software Engineering Student
+
+FAST National University of Computer & Emerging Sciences
+
+---
+

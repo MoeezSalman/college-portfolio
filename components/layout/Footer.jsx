@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedinIn, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaInstagram,
+  FaXTwitter,
+} from "react-icons/fa6";
 import { FiMapPin, FiPhone, FiMail } from "react-icons/fi";
 
 const socials = [
@@ -27,28 +32,29 @@ const programLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-800 bg-slate-950 text-white">
-      <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="border-t border-stone-200 bg-stone-50 transition-colors duration-300 dark:border-slate-800 dark:bg-slate-950">
+
+      <div className="w-full px-6 py-16 lg:px-10 xl:px-14">
+        <div className="grid gap-14 lg:grid-cols-[2fr_1fr_1fr_1.4fr]">
 
           {/* Brand */}
           <div>
-            <h2 className="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-2xl font-extrabold tracking-tight text-transparent">
-              College Portfolio
+            <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 dark:bg-gradient-to-r dark:from-blue-300 dark:via-cyan-300 dark:to-sky-400 dark:bg-clip-text dark:text-transparent">
+              Innovia Institute
             </h2>
 
-            <p className="mt-4 leading-7 text-slate-400">
-              Building future leaders through quality education, innovation,
-              and excellence since 1985.
+            <p className="mt-5 max-w-xs leading-8 text-slate-600 dark:text-slate-400">
+              Building future leaders through quality education,
+              innovation, and excellence since 1985.
             </p>
 
-            <div className="mt-6 flex gap-3">
+            <div className="mt-7 flex gap-3">
               {socials.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-800 bg-slate-900 text-slate-400 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/50 hover:bg-blue-500/10 hover:text-blue-400"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-stone-300 bg-white text-slate-600 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 hover:text-blue-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-400 dark:hover:border-blue-500 dark:hover:bg-blue-500/10 dark:hover:text-blue-400"
                 >
                   {social.icon}
                 </a>
@@ -58,16 +64,16 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-5 text-sm font-semibold uppercase tracking-wider text-slate-300">
+            <h3 className="mb-6 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white">
               Quick Links
             </h3>
 
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-slate-400 transition-colors duration-300 hover:text-blue-400"
+                    className="text-base text-slate-600 transition hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400"
                   >
                     {link.name}
                   </Link>
@@ -78,16 +84,16 @@ export default function Footer() {
 
           {/* Programs */}
           <div>
-            <h3 className="mb-5 text-sm font-semibold uppercase tracking-wider text-slate-300">
+            <h3 className="mb-6 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white">
               Programs
             </h3>
 
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {programLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-slate-400 transition-colors duration-300 hover:text-blue-400"
+                    className="text-base text-slate-600 transition hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400"
                   >
                     {link.name}
                   </Link>
@@ -98,13 +104,13 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="mb-5 text-sm font-semibold uppercase tracking-wider text-slate-300">
+            <h3 className="mb-6 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white">
               Contact
             </h3>
 
-            <ul className="space-y-4 text-slate-400">
-              <li className="flex items-start gap-3">
-                <FiMapPin className="mt-1 shrink-0 text-blue-400" />
+            <ul className="space-y-5 text-slate-600 dark:text-slate-400">
+              <li className="flex items-start gap-4">
+                <FiMapPin className="mt-1 text-lg text-blue-600 dark:text-blue-400" />
                 <span>
                   123 University Avenue
                   <br />
@@ -112,13 +118,13 @@ export default function Footer() {
                 </span>
               </li>
 
-              <li className="flex items-center gap-3">
-                <FiPhone className="shrink-0 text-blue-400" />
+              <li className="flex items-center gap-4">
+                <FiPhone className="text-lg text-blue-600 dark:text-blue-400" />
                 <span>+92 300 1234567</span>
               </li>
 
-              <li className="flex items-center gap-3">
-                <FiMail className="shrink-0 text-blue-400" />
+              <li className="flex items-center gap-4">
+                <FiMail className="text-lg text-blue-600 dark:text-blue-400" />
                 <span>admissions@college.edu.pk</span>
               </li>
             </ul>
@@ -127,16 +133,15 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-slate-800/70">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-sm text-slate-500 sm:flex-row">
-          <p>© {new Date().getFullYear()} College Portfolio. All rights reserved.</p>
-          <p>
-            Built with <span className="text-blue-400">Next.js</span> &{" "}
-            <span className="text-blue-400">Tailwind CSS</span>
+      {/* Bottom */}
+      <div className="border-t border-stone-200 dark:border-slate-800">
+        <div className="w-full px-6 py-6 lg:px-10 xl:px-14">
+          <p className="text-center text-sm font-medium text-slate-600 dark:text-slate-400">
+            © {new Date().getFullYear()} College Portfolio. All rights reserved.
           </p>
         </div>
       </div>
+
     </footer>
   );
 }

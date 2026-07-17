@@ -6,7 +6,7 @@ import { HiArrowRight } from "react-icons/hi2";
 
 export default function ProgramsPreview() {
   return (
-    <section className="bg-slate-50 py-24 dark:bg-slate-900/40">
+    <section className="py-24">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal>
           <div className="mb-14 text-center">

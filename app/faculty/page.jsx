@@ -29,8 +29,10 @@ export default function FacultyPage() {
           department: DEPARTMENTS[index % DEPARTMENTS.length],
         }));
 
-        setFaculty(withDepartments);
-        setFilteredFaculty(withDepartments);
+const firstSix = withDepartments.slice(0, 6);
+
+setFaculty(firstSix);
+setFilteredFaculty(firstSix);
       } catch (err) {
         setError("Failed to load faculty.");
       } finally {

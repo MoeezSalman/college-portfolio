@@ -13,8 +13,6 @@ export default function Home() {
       <Stats />
       <About />
       <ProgramsPreview />
-      <TestimonialsPreview />
-      <NewsPreview />
       <CTA />
     </>
   );
